@@ -40,6 +40,7 @@ public class GameController {
 
         game.setName(player.getFirstName() + " " + player.getLastName() + "'s game");
         game.setPlayers(new ArrayList<>());
+        game.getPlayers().add(player);
         game.setCharacters(new ArrayList<>());
 
         return gameRepository.save(game);

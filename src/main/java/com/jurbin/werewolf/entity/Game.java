@@ -1,28 +1,15 @@
 package com.jurbin.werewolf.entity;
 
-import com.jurbin.werewolf.repository.CharacterRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.annotation.Id;
 
 import java.util.ArrayList;
 
 public class Game {
-    @Autowired
-    CharacterRepository characterRepository;
-
     @Id
     String id;
     String name;
     ArrayList<Player> players;
     ArrayList<Character> characters;
-
-    public CharacterRepository getCharacterRepository() {
-        return characterRepository;
-    }
-
-    public void setCharacterRepository(CharacterRepository characterRepository) {
-        this.characterRepository = characterRepository;
-    }
 
     public String getId() {
         return id;

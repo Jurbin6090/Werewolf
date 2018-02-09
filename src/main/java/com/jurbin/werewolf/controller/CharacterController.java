@@ -25,6 +25,7 @@ public class CharacterController {
     @PostMapping(value = "/character/create")
     public Character createCharacter(@RequestParam String name, @RequestParam String description, @RequestParam Integer powerLevel, @RequestParam Boolean isVillager) {
         Character character = new Character();
+
         character.setName(name);
         character.setDescription(description);
         character.setPowerLevel(powerLevel);
@@ -36,6 +37,7 @@ public class CharacterController {
     @DeleteMapping(value = "/character/remove/{id}")
     public String removeCharacter(@PathVariable(value = "id") String id) {
         characterRepository.delete(id);
+
         return "Character removed";
     }
 }

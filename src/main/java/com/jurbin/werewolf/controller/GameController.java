@@ -61,7 +61,7 @@ public class GameController {
         return gameRepository.save(game);
     }
 
-    @PostMapping("/game/{gameId}/addCharacter/{playerId}")
+    @PostMapping("/game/{gameId}/addCharacter/{characterId}")
     public Game addCharacter(@PathVariable(value = "gameId") String gameId, @PathVariable(value = "characterId") String characterId) {
         Game game = gameRepository.findOne(gameId);
 

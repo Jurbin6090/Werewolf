@@ -35,7 +35,7 @@ public class CharacterController {
         return characterRepository.save(character);
     }
 
-    @DeleteMapping(value = "/character/remove/{id}")
+    @DeleteMapping(value = "/character/{id}")
     public String removeCharacter(@PathVariable(value = "id") String id) {
         characterRepository.delete(id);
 
